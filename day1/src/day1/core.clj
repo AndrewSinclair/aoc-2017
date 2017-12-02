@@ -27,8 +27,8 @@
 (defn part2
   []
   (let [half (quot (count puzzle-input) 2)]
-    (->> inputs
-      (partition half)
+    (->> puzzle-input
+      (split-at half)
       (apply map vector)
       (filter pair?)
       flatten
