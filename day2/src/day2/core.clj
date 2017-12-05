@@ -2,10 +2,10 @@
 
 (defn parse-input
   [text]
-  (->>
-    (clojure.string/split-lines text)
+  (->> text
+    clojure.string/split-lines
     (map #(clojure.string/split % #"\t"))
-    (map (fn [v] (map #(Integer. %) v)))))
+    (map read-string)))
 
 (def input
   (-> "input.txt"

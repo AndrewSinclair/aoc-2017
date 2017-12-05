@@ -3,7 +3,7 @@
 (defn input->ints
   [input]
   (->> input
-    (map (fn [c] (Integer. (str c))))))
+    (map read-string))
 
 (defn pair?
   [[a b]]
