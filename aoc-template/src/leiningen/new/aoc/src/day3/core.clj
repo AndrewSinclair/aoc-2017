@@ -5,7 +5,7 @@
   [text]
   ;(clojure.string/split-lines text)
   ;(clojure.string/split text #"\s")
-  ;(Integer. (str \1))
+  ;(read-string)
   ;(re-matches re s)
   )
 
