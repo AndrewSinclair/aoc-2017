@@ -7,7 +7,7 @@ Day | Part 1 | Part 2
 3   | DONE   | IN PROGRESS
 4   | DONE   | DONE
 5   | DONE   | DONE
-6   |        | 
+6   | DONE   | DONE
 7   |        | 
 8   |        | 
 9   |        | 
