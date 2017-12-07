@@ -54,9 +54,46 @@
    (ring-num input)
    (Math/abs (- (mid-point-val input) input))))
 
+(def initial-rings
+  [[1]
+   [1 2 4 5 10 11 23 25]])
+
+(defn num-sides
+  [n]
+  (let [length (side-length n)]
+    [(dec length)
+     length
+     length
+     (inc length)]))
+
+(defn not'
+  [fun]
+  (fn [n] (not (fun n))))
+
+
+(defn index-ring-start
+  [ring-n]
+  (->> ring-n
+    (* 2)
+    dec
+    **2))
+
+(defn is-done?
+  [[n]]
+  true)
+
+(defn step-rings
+  [rings]
+  (let [ring-n (count rings)]
+    nil))
+
+
 (defn part2
+  "And now for something completely different."
   []
-  nil)
+  (->> initial-rings
+       #_(iterate step-rings)
+       #_(drop-while (not' is-done?))))
 
 (do
    (println (part1))
