@@ -25,20 +25,19 @@
   (->> nodes
     (some #{id})))
 
-(defn part1
-  [input]
+(def part1
   (->> input
     connected-components
     (filter #(contains-node? "0" %))
     first
     count))
 
-(defn part2
-  [input]
+(def part2
   (->> input
     connected-components
     count))
 
 (do
-   (println (part1 input))
-   (println (part2 input)))
+   (println part1)
+   (println part2))
+
