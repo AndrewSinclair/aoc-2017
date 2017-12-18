@@ -11,14 +11,12 @@
 
 (def input (parse-input (slurp "input.txt")))
 
-(defn part1
-  []
+(def part1
   nil)
 
-(defn part2
-  []
+(def part2
   nil)
 
 (do
-   (println (part1))
-   (println (part2)))
+   (println part1)
+   (println part2))
