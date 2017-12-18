@@ -1,5 +1,4 @@
-(ns day3.core
-    (:require [clojure.tools.trace :refer [trace]]))
+(ns day3.core)
 
 (def input 312051)
 
@@ -48,53 +47,43 @@
      (side-length n))
     (+ (quot (side-length n) 2))))
 
-(defn part1
-  []
-  (+
+(defn next-coord
+  [[x y]]
+  ; TODO
+  ([x y]))
+
+(def part1
+ (+
    (ring-num input)
    (Math/abs (- (mid-point-val input) input))))
 
-(def initial-rings
-  [[1]
-   [1 2 4 5 10 11 23 25]])
+(defn get-sum-neighbors
+  [[x y]]
+  (vector
+    [x y]
+    (+
+      (get [x (inc y)] grid)
+      (get [x (dec y)] grid)
+      (get [(inc x) y] grid)
+      (get [(dec x) y] grid)
+      (get [(inc x) (inc y)] grid)
+      (get [(inc x) (dec y)] grid)
+      (get [(dec x) (inc y)] grid)
+      (get [(dec x) (dec y)] grid))))
 
-(defn num-sides
-  [n]
-  (let [length (side-length n)]
-    [(dec length)
-     length
-     length
-     (inc length)]))
+(defn update-value!
+  
+  )
 
-(defn not'
-  [fun]
-  (fn [n] (not (fun n))))
-
-
-(defn index-ring-start
-  [ring-n]
-  (->> ring-n
-    (* 2)
-    dec
-    **2))
-
-(defn is-done?
-  [[n]]
-  true)
-
-(defn step-rings
-  [rings]
-  (let [ring-n (count rings)]
-    nil))
-
-
-(defn part2
-  "And now for something completely different."
-  []
-  (->> initial-rings
-       #_(iterate step-rings)
-       #_(drop-while (not' is-done?))))
+(def part2
+  (->> [0 0]
+       (iterate next-coord)
+       (map get-sum-neighbors)
+       (map #(apply + %))
+       update-value!
+       (filter #(< input %))
+       first))
 
 (do
-   (println (part1))
-   (println (part2)))
+ (println part1)
+ (println part2))
