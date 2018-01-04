@@ -8,15 +8,15 @@ Day | Part 1 | Part 2
 4   | DONE   | DONE
 5   | DONE   | DONE
 6   | DONE   | DONE
-7   |        | 
-8   |        | 
-9   |        | 
+7   | DONE   | DONE
+8   | DONE   | DONE
+9   | DONE   | DONE
 10  |        | 
-11  |        | 
-12  |        | 
-13  |        | 
+11  | DONE   | DONE
+12  | DONE   | DONE
+13  | DONE   | IN PROGRESS
 14  |        | 
-15  |        | 
+15  | DONE   | DONE
 16  |        | 
 17  |        | 
 18  |        | 
